@@ -13,13 +13,13 @@ use serde_json::Value;
 async fn main() {
     dotenv().ok();
 
-    let key = env::var("KEY").unwrap();
-    let token = env::var("TOKEN").unwrap();
-    let board_id = env::var("BOARD_ID").unwrap();
-    let url = format!(
-        "https://api.trello.com/1/boards/{}?key={}&token={}",
-        board_id, key, token
-    );
+    // let key = env::var("KEY").unwrap();
+    // let token = env::var("TOKEN").unwrap();
+    // let board_id = env::var("BOARD_ID").unwrap();
+    // let url = format!(
+    //     "https://api.trello.com/1/boards/{}?key={}&token={}",
+    //     board_id, key, token
+    // );
 
     let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
 
