@@ -23,7 +23,7 @@ async fn main() {
 
     let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
 
-    let app = Router::new().route("/", head(webhook_check).post(manage_webhook));
+    let app = Router::new().route("/trello-callback", head(webhook_check).post(manage_webhook));
 
     axum::Server::bind(&addr)
         .serve(app.into_make_service())
